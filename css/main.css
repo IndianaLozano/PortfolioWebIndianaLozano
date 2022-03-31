@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospaces;
+    text-decoration: none;
+    background-color: #f7eaec;
+    background-image: linear-gradient(315deg, #fae8ea 0%, #f8c5c5 74%);
+}
+
+body{
+    padding: 20px;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+header{
+    display: block;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu{
+    text-align: center;
+    z-index: 2;
+}
+
+.menu ul li{
+    text-decoration: none;
+    color: darkmagenta;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-style: dotted;
+}
+
+nav ul li a{
+    text-align: center;
+}
+
+header div {
+    display: block;
+    background-image: url('../assets/img/pinkbackground.jpg');
+}
+
+header div img {
+    position: center;
+    background-image: inherit;
+    background-position: center;
+    background-size: cover;
+} 
+
+.title {
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    display: block;
+    background-image: url('../assets/img/pinkbackground.jpg');
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+footer{
+    position: sticky;
+    color: darkmagenta;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+    border-style: dotted;
+    bottom: 0;
+    position:static;
+    width: 99%;
+    height: 80px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
