@@ -4,41 +4,44 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/main.css">
 	<link rel="shortcut icon" href="../assets/img/logoindianalozanoportfolio.png">
+	<link rel="stylesheet" href="../css/main.css">
 
-	<title> Contact Indiana Lozano </title>
+	<title> Portfolio Web - Indiana Lozano </title>
 </head>
 
 <body>
 
-	<!-- header -->
-	<header>
+	<div class="wrapper">
+		<header>
+			<div class="navbar">
+				<div class="brand">
+					<a href="../index.html"> <img src="../assets/img/logoindianalozanoportfolio.png"
+							alt="Indiana Lozano's Work Experience" width="150px" height="150px"></a>
+				</div>
+				<ul class="menu">
+					<li><a href="projects.html"> Projects </a></li>
+					<li><a href="achievements.html"> Achievements and certifications </a></li>
+					<li><a href="workExperience.html"> Work experience </a></li>
+					<li><a href="contact.html"> Contact Indiana </a></li>
+					<li><a href="https://www.google.com" target="_blank"> Go to Google </a></li>
+				</ul>
+			</div>
+		</header>
 
-		<nav class="menu">
-			<ul>
-				<li><a href="../index.html"> <img src="../assets/img/logoindianalozanoportfolio.png"
-							alt="Indiana Lozano's Portfolio Web" width="200px" height="100px"></a></li>
-				<li><a href="./projects.html"> Projects </a></li>
-				<li><a href="./achievements.html"> Achievements and certifications </a></li>
-				<li><a href="./workExperience.html"> Work experience </a></li>
-				<li><a href="#"> Contact Indiana </a></li>
-				<li><a href="https://www.google.com" target="_blank"> Go to Google </a></li>
-			</ul>
-		</nav>
+		<main class="main">
+			<div class="info-content">
+				<h1>Contact Indiana</h1>
+			</div>
+			<div class="img-woman">
+				<img src="../assets/img/programmer_woman.png" alt="Woman who codes">
+			</div>
+		</main>
+	</div>
 
-		<div class="title">
-			<h1>Contact Indiana</h1>
-			<img class="" src="../assets/img/programmer_woman.png" alt="Woman who codes" height="300px">
-		</div>
+	<div class="about">
 
-	</header>
-	<!-- cierre de header -->
-
-	<main>
-
-		<!-- formulario de contacto -->
-		<section>
+		<section class="contactMe">
 			<form action="#">
 				<label for="name">Your name</label>
 				<div>
@@ -61,15 +64,14 @@
 					</div>
 			</form>
 		</section>
-		<!-- cierre de form contacto -->
 
-	</main>
+	</div>
 
-	<!-- inicio de footer -->
-	<footer>
-		<p> Location </p>
+	<footer class="footer">
+		<div class="footer-content">
+			Location
+		</div>
 	</footer>
-
 </body>
 
 </html>
