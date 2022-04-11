@@ -8,6 +8,8 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background: rgb(238,174,202);
+    background: linear-gradient(0deg, rgb(252, 247, 249) 80%, pink 70%);
 }
 
 .div-body-grid-content{
@@ -39,6 +41,11 @@ body{
 /* para el logo que redirige al home */
 .brand{
     margin: 0px 20px;
+}
+
+.brand:hover{
+    transform: scale(2, 2);
+    transition: ease-in .2s;
 }
 
 .menu{
@@ -149,7 +156,6 @@ h2{
     margin: 5px;
     margin-top: 30px;
     margin-left: 30px;
-
 }
 
 .divider{
@@ -161,7 +167,7 @@ h2{
     margin-left: 1rem;
     
 }
-.about p, section{
+.about .about-info p, section{
     margin-bottom: 1em;
     font-size: 1rem;
     font-weight: bolder;
@@ -181,6 +187,16 @@ h2{
     font-weight: bold;
     margin-top: auto;
     display: flex;
+}
+
+@keyframes move{
+    from{
+        transform: rotate(-10deg);
+    }
+
+    to{
+        transform: rotate(10deg);
+    }
 }
 
 /* cuando haya como minimo 600px, las cosas se acomodan de la siguiente forma*/
@@ -236,4 +252,51 @@ h2{
         font-size: 1rem;
     }
 
+}
+
+@media only screen and (min-width:1024px){
+    
+    .brand{
+        margin: 10px 20px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .about{
+        font-size: 2rem;
+    }
+
+    .about-info{
+        font-size: 2rem;
+    }
+
+    .about-achievements{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 5px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .about .about-info p, section{
+        margin-bottom: 1em;
+        font-size: 1.3rem;
+        font-weight: bolder;
+        padding: 30px;
+    }
+
+    .contactMe{
+        grid-column: 2/7;
+    }
+
+    .img-woman{
+        animation-name: move;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+    }
 }
