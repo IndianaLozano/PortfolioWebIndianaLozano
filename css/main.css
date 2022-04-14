@@ -8,15 +8,14 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background: rgb(238,174,202);
-    background: linear-gradient(0deg, rgb(252, 247, 249) 80%, pink 70%);
+    background: white;
 }
 
 .div-body-grid-content{
     display: grid;
-    grid-template-areas: "wrapper wrapper wrapper wrapper"
-                        "about about about about"
-                        "footer footer footer footer";
+    grid-template-areas: "wrapper wrapper"
+                        "about about "
+                        "footer footer";
 }
 
 .wrapper{
@@ -29,6 +28,13 @@ body{
                         "main main";
 }
 
+.wrapper-sinB{
+    background-color: pink;
+    color: rgb(170, 0, 28);
+    grid-area: wrapper;
+    grid-template-areas: "navbar navbar"
+                        "main main";
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -82,8 +88,8 @@ ul{
 
 .main{
     margin: 0 auto;
-    width: 80vw;
-    height: 30vh;
+    width: 100vw;
+    height: 200px;
     display: flex;
     /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
@@ -92,8 +98,9 @@ ul{
     grid-area: main;
 }
 
-.img-woman{
-    width: 300px;
+img{
+    width: 100px;
+    border: 7px;
     text-align: center;
 }
 
@@ -115,14 +122,10 @@ h1{
     background-color: rgb(253, 205, 205);
 }
 
-.main img{
-    width: 200px;
-    border: 7px;
-}
 
 .about{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100vw;
     align-items: center;
     grid-area: about;
