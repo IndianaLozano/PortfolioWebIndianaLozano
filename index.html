@@ -17,89 +17,66 @@
 </head>
 
 <body>
+	<div class="container-fluid">
 
-	<!-- Las clases que tienen al final "-sinB" son clases que, cuando no uso bootstrap, son usadas para aplicar estilos -->
-	<div class="div-body-grid-content-sinB container-fluid justify-content-between">
-		<div class="wrapper-sinB row d-flex justify-content-between">
+		<!-- Las clases que tienen al final "-conB" son clases usadas para aplicar estilos CSS cuando uso bootstrap -->
+		<header class="header row">
 
-			<!-- <header class="container-fluid">
-				<div class="navbar d-flex justify-content-between">
+			<nav class="navbar navbar-expand-lg navbar-light bg-pink d-flex justify-content-around">
 
-					<div class="brand row">
-						<a class="navbar-brand" href="#"> <img src="./assets/img/logoindianalozanoportfolio.png"
-								alt="Indiana Lozano's Portfolio Web" width="150px" height="150px"></a>
-					</div>
+				<a class="nav-item text-decoration-none" href="#"><img class=" logo img-fluid"
+						src="./assets/img/logoindianalozanoportfolio.png" alt="Indiana Lozano's Portfolio Web">
+				</a>
 
-					<ul class="menu-sinB row">
-						<li><a href="pages/projects.html"> Projects </a></li>
-						<li><a href="pages/achievements.html"> Achievements and certifications </a></li>
-						<li><a href="pages/workExperience.html"> Work experience </a></li>
-						<li><a href="pages/contact.html"> Contact Indiana </a></li>
-						<li><a href="https://www.google.com" target="_blank"> Go to Google </a></li>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="pages/projects.html"> Projects </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/achievements.html"> Achievements and certifications </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/workExperience.html"> Work experience </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/contact.html"> Contact </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.google.com"> Go to Google </a>
+						</li>
 					</ul>
-
-				</div>
-			</header> -->
-
-			<nav class="row navbar-sinB navbar-expand-lg navbar-light bg-pink container">
-				<div class="container-fluid">
-
-					<a class="nav-item text-decoration-none" href="#"><img
-							src="./assets/img/logoindianalozanoportfolio.png" alt="Indiana Lozano's Portfolio Web"
-							width="100px" height="100px">
-					</a>
-
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="pages/projects.html"> Projects </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="pages/achievements.html"> Achievements and certifications </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="pages/workExperience.html"> Work experience </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="pages/contact.html"> Contact </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.google.com"> Go to Google </a>
-							</li>
-						</ul>
-					</div>
 				</div>
 			</nav>
+		</header>
 
-			<main class="main row">
-				<div class="info-content col-6">
-					<h1 class="animate__animated animate__fadeInDown ">Indiana Lozano's Portfolio Web</h1>
-					<a download href="#">
-						<button class="download-cv">
-							Download CV
-						</button>
-					</a>
-				</div>
-				<div class="img-woman img-fluid col-6">
-					<img src="assets/img/programmer_woman.png" alt="Woman who codes">
-				</div>
-			</main>
-
-		</div>
-
-		<div class="about row">
-
-			<div class="image-indi">
-				<img class="" src="assets/img/indi.png" alt="Woman who codes" height="500px">
+		<main class="main row">
+			<div class="info-content-conB col-6 d-flex-col justify-content-center">
+				<h1 class="animate__animated animate__fadeInDown ">Indiana Lozano's Portfolio Web</h1>
+				<a download href="#" class="d-flex justify-content-center text-decoration-none">
+					<button class="download-cv">
+						Download CV
+					</button>
+				</a>
 			</div>
+			<div class="col-6 d-flex justify-content-around">
+				<img class="img-woman img-fluid width-100 height-500" src="assets/img/programmer_woman.png"
+					alt="Woman who codes">
+			</div>
+		</main>
 
-			<div class="about-info mt-8">
+		<div class="about-conB row col-12">
+
+			<img class="img-fluid image-indi col-lg-3" src="assets/img/indi.png" alt="Woman who codes" height="1000px"
+				width="1000px">
+
+			<div class="about-info-conB col-md-12 col-lg-9">
 				<h2>About me</h2>
 				<div class="divider"></div>
 				<p>I started studying Information Systems Engineering at the UTN FRSF in 2015. Currently, I continue
@@ -149,13 +126,12 @@
 
 		</div>
 
+		<footer class="footer row">
+			<div class="footer-content">
+				Location
+			</div>
+		</footer>
 	</div>
-
-	<footer class="footer">
-		<div class="footer-content">
-			Location
-		</div>
-	</footer>
 
 
 	<script src="js/wow.min.js"></script>
@@ -168,6 +144,7 @@
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
 
+	</div>
 </body>
 
 </html>

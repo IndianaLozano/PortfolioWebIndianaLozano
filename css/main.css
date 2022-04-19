@@ -18,6 +18,11 @@ body{
                         "footer footer";
 }
 
+.header{
+    background-color: pink;
+    color: rgb(170, 0, 28);
+}
+
 .wrapper{
     width: 100vw;
     height: 50vh;
@@ -28,20 +33,18 @@ body{
                         "main main";
 }
 
-.wrapper-sinB{
-    background-color: pink;
-    color: rgb(170, 0, 28);
-    grid-area: wrapper;
-    grid-template-areas: "navbar navbar"
-                        "main main";
-}
-.navbar{
+.navbar-sinB{
     display: flex;
     align-items: center;
     grid-area: navbar;
     text-decoration: none;
     text-align: center;
     justify-content: space-around;
+}
+
+.navbar{
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 /* para el logo que redirige al home */
@@ -51,6 +54,15 @@ body{
 
 .brand:hover{
     transform: scale(2, 2);
+    transition: ease-in .2s;
+}
+
+.nav-link{
+    margin: 0px 20px;
+}
+
+.nav-link:hover{
+    transform: scale(1.1, 1.3);
     transition: ease-in .2s;
 }
 
@@ -89,12 +101,10 @@ ul{
 .main{
     margin: 0 auto;
     width: 100vw;
-    height: 200px;
     display: flex;
     /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
-    justify-items: center;
-    justify-content: space-around;
+    justify-content: center;
     grid-area: main;
 }
 
@@ -105,23 +115,31 @@ img{
 }
 
 h1{
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.info-content-conB{
+    align-items: center;
 }
 
 .download-cv{
-    padding: 10px 20px;
+    padding: 7px 20px;
     background-color: rgb(243, 95, 181);
+    font-style: bold;
     border: none;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     cursor: pointer;
     box-shadow: 1px 2px rgb(240, 64, 166);
+    font-weight: 900;
+    color: white;
+
 }
 
 .download-cv:hover{
     background-color: rgb(253, 205, 205);
 }
-
 
 .about{
     display: grid;
@@ -129,6 +147,11 @@ h1{
     width: 100vw;
     align-items: center;
     grid-area: about;
+}
+
+.about-conB{
+    align-items: center;
+    justify-content: center;
 }
 
 .about-achievements{
@@ -154,11 +177,23 @@ h1{
     font-weight: bolder;
 }
 
+.about-info-conB{
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+
 h2{
     font-size: 1.2rem;
     margin: 5px;
     margin-top: 30px;
     margin-left: 30px;
+    font-weight: bolder;
+}
+
+h3{
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 .divider{
@@ -172,7 +207,7 @@ h2{
 }
 .about .about-info p, section{
     margin-bottom: 1em;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bolder;
     padding: 30px;
 }
@@ -210,12 +245,31 @@ h2{
         margin: 30px;
     }
 
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+
     .menu li a {
         padding: 10px;
         font-size: 0.7rem;
         display: block;
     }
 
+    .about-info-conB{
+        grid-column: 1/5;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: bolder;
+    }
+
+    .img-woman{
+        width: 150px;
+    }
+
+    .info-content-conB{
+        padding-left: 50px;
+    }
 }
 
 /* cuando haya como minimo 600px, las cosas se acomodan de la siguiente forma*/
@@ -227,7 +281,7 @@ h2{
         display: block;
     }
 
-    .image-indi{
+    .image-indi-sinB{
         display: flex;
         grid-column: 1/1;
     }
@@ -239,11 +293,16 @@ h2{
 
 @media only screen and (min-width:1024px){
     
+    .navbar{
+        font-weight: bolder;
+    }
+
     .brand{
         margin: 10px 20px;
     }
 
     h1{
+        display: inline-block;
         font-size: 2rem;
     }
 
@@ -255,23 +314,59 @@ h2{
         font-size: 1rem;
     }
 
+    .navbar-collapse{
+        flex-grow: 0;
+    }
+
 }
 
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1200px){
+
+    .header{
+        padding: 0px;
+    }
+
+    .navbar{
+        padding: 0px;
+    }
+    .logo{
+        width: 250px;
+        height: 250px;
+    }
+
+    .nav-item{
+            color: rgb(170, 0, 28);
+            padding: 5px 5px;
+            font-weight: bold;
+            font-size: 2rem;
+            text-decoration: none;
+    }
+
+    img{
+        width: 200px;
+        border: 7px;
+        text-align: center;
+    }
+
+    .image-indi{
+        display: flex;
+        grid-column: 1/1;
+    }
     
     .brand{
         margin: 10px 20px;
     }
 
     h1{
+        font-size: 4rem;
+        padding-left: 50px;
+    }
+
+    .about-conB{
         font-size: 3rem;
     }
 
-    .about{
-        font-size: 2rem;
-    }
-
-    .about-info{
+    .about-info-conB{
         font-size: 2rem;
     }
 
@@ -280,15 +375,17 @@ h2{
     }
 
     h2{
-        font-size: 2rem;
+        font-size: 3rem;
         margin: 5px;
         margin-top: 30px;
         margin-left: 30px;
     }
 
+    h3{
+        font-size: 2.7rem;
+    }
     .about .about-info p, section{
-        margin-bottom: 1em;
-        font-size: 1.3rem;
+        font-size: 1.9rem;
         font-weight: bolder;
         padding: 30px;
     }
@@ -298,8 +395,18 @@ h2{
     }
 
     .img-woman{
+        width: 300px;
+        height: 400px;
         animation-name: move;
         animation-iteration-count: infinite;
         animation-duration: 5s;
+    }
+
+    .download-cv{
+        font-size: 1.7rem;
+    }
+
+    .contact-me{
+        padding: 200px;
     }
 }
