@@ -11,7 +11,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background: $default-background-color;
+    background: $default-background-color-white;
 
     ul{
         padding: 0px 30px;
@@ -53,13 +53,13 @@ body{
         width: 100vw;
         height: 50vh;
         background-color: pink;
-        color: rgb(170, 0, 28);
+        color: nth($colores, 2);
         grid-area: wrapper;
         grid-template-areas: "header header"
                             "main main";
         .header{
             background-color: pink;
-            color: rgb(170, 0, 28);
+            color: nth($colores, 2);
             grid-area: header;
 
             .navbar-sinB{
@@ -176,6 +176,14 @@ body{
             height: fit-content;
         }
 
+        .contact-me{
+            input, textarea{
+                width: 90vw;
+            }
+            display: flex;
+            justify-content: center;
+        }
+
         .about-info{
             padding: 1rem;
             font-size: 0.9rem;
@@ -188,7 +196,6 @@ body{
                 margin-top: 0px;
                 margin-bottom: 1rem;
                 margin-left: 1rem;
-                
             }
         }
 
@@ -217,13 +224,33 @@ body{
 
     .footer{
         grid-area: footer;
-        flex-direction: column;
+        display: flex;
         justify-content: center;
-        padding: 1em 0;
-        color: darkmagenta;
+        text-align: center;
+        border-top: pink 2px;
+        border-top-style: solid;
+        padding: 0.5rem 0;
+        color: rgb(240, 64, 166);
         font-weight: bold;
         margin-top: auto;
-        display: flex;
+        
+
+        @keyframes beat{
+            to { transform: scale(1.4); }
+        }
+
+        .img-heart {
+            width: 25px;
+            font-size: 20px;
+            color: #e00;
+            animation: beat .25s infinite alternate;
+            transform-origin: center;
+        }
+
+        p{
+            margin: 20px;
+        }
+
     }
 
     /* cuando haya como minimo 600px, las cosas se acomodan de la siguiente forma*/
@@ -323,6 +350,11 @@ body{
             font-weight: bolder;
             padding: 30px;
         }
+
+        // .contact-me{
+        //     padding: 20px;
+        //     grid-column: 1/6;
+        // }
     }
 
     @media only screen and (min-width:1200px){
@@ -402,8 +434,5 @@ body{
             font-size: 1.7rem;
         }
     
-        .contact-me{
-            padding: 200px;
-        }
     }
 }

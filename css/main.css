@@ -125,6 +125,11 @@ body {
     body .about .image-indi {
       display: none;
       height: fit-content; }
+    body .about .contact-me {
+      display: flex;
+      justify-content: center; }
+      body .about .contact-me input, body .about .contact-me textarea {
+        width: 90vw; }
     body .about .about-info {
       padding: 1rem;
       font-size: 0.9rem;
@@ -152,13 +157,27 @@ body {
     font-weight: bolder; }
   body .footer {
     grid-area: footer;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    padding: 1em 0;
-    color: darkmagenta;
+    text-align: center;
+    border-top: pink 2px;
+    border-top-style: solid;
+    padding: 0.5rem 0;
+    color: #f040a6;
     font-weight: bold;
-    margin-top: auto;
-    display: flex; }
+    margin-top: auto; }
+
+@keyframes beat {
+  to {
+    transform: scale(1.4); } }
+    body .footer .img-heart {
+      width: 25px;
+      font-size: 20px;
+      color: #e00;
+      animation: beat .25s infinite alternate;
+      transform-origin: center; }
+    body .footer p {
+      margin: 20px; }
   @media only screen and (min-width: 600px) {
     body .wrapper {
       width: 100vw;
@@ -261,6 +280,4 @@ body {
       animation-iteration-count: infinite;
       animation-duration: 5s; }
     body .download-cv {
-      font-size: 1.7rem; }
-    body .contact-me {
-      padding: 200px; } }
+      font-size: 1.7rem; } }
