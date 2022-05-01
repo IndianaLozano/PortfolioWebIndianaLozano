@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100&family=Roboto:wght@500&display=swap");
-body .main .info-content .download-cv {
+body .main .info-content .download-cv, body .about .contact-me .send-button .send {
   padding: 7px 20px;
   background-color: #f35fb5;
   font-style: bolder;
@@ -12,8 +12,11 @@ body .main .info-content .download-cv {
   box-shadow: 1px 2px #f040a6;
   font-weight: 900;
   color: black; }
-  body .main .info-content .download-cv:hover {
+  body .main .info-content .download-cv:hover, body .about .contact-me .send-button .send:hover {
     background-color: #fdcdcd; }
+  @media only screen and (min-width: 1200px) {
+    body .main .info-content .download-cv, body .about .contact-me .send-button .send {
+      font-size: larger; } }
 
 * {
   margin: 0;
@@ -47,6 +50,8 @@ body {
   body .div-body-grid-content {
     display: grid;
     grid-template-areas: "wrapper wrapper" "about about " "footer footer"; }
+  body .nav-link {
+    font-weight: 700; }
   body .wrapper {
     width: 100vw;
     height: 50vh;
@@ -127,8 +132,8 @@ body {
     align-items: center;
     grid-area: about;
     /*para pantallas hasta 480px: display:none; para más: display:flex; */ }
-    body .about .image-indi {
-      height: fit-content; }
+    body .about .image-indi-div {
+      display: none; }
     body .about .contact-me {
       display: flex;
       justify-content: center;
@@ -137,6 +142,10 @@ body {
       body .about .contact-me input,
       body .about .contact-me textarea {
         width: 90vw; }
+      body .about .contact-me .send-button {
+        display: flex;
+        justify-content: center;
+        text-align: center; }
     body .about .about-info {
       padding: 1rem;
       font-size: 0.9rem;
@@ -297,4 +306,4 @@ body {
       animation-iteration-count: infinite;
       animation-duration: 5s; }
     body .download-cv {
-      font-size: 1.7rem; } }
+      font-size: 3rem; } }
