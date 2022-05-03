@@ -1,4 +1,9 @@
 ¡Welcome to my Portfolio Web! 
 
-Google doc:
-https://docs.google.com/document/d/1Ao_2jLxjws8Mo1SQpwmlSqRuWdXpQ1u9kZVluiwmRjs/edit?usp=sharing
+It's made with HTML, SCSS, and Bootstrap. ¡Enjoy it!
+
+https://github.com/IndianaLozano/PortfolioWebIndianaLozano
+
+https://portfoliowebindianalozano.000webhostapp.com/index.html#
+
+https://indianalozano.github.io/PortfolioWebIndianaLozano/pages/achievements.html
