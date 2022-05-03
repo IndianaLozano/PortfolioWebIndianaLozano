@@ -47,9 +47,54 @@ body {
   body h3 {
     font-weight: bolder;
     font-size: 1rem; }
-  body .div-body-grid-content {
+  body .div-body-grid-content-2-columns {
     display: grid;
     grid-template-areas: "wrapper wrapper" "about about " "footer footer"; }
+  body .div-body-grid-content {
+    display: grid;
+    grid-template-areas: "wrapper" "about" "footer";
+    justify-content: center;
+    margin: 0; }
+    body .div-body-grid-content .about-projects,
+    body .div-body-grid-content .about-achievements,
+    body .div-body-grid-content .about-work {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-flow: column nowrap;
+      padding: 5px;
+      margin: 20px; }
+      body .div-body-grid-content .about-projects h2,
+      body .div-body-grid-content .about-achievements h2,
+      body .div-body-grid-content .about-work h2 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: bolder;
+        border-bottom: 1px solid pink; }
+      body .div-body-grid-content .about-projects .p-achievements,
+      body .div-body-grid-content .about-achievements .p-achievements,
+      body .div-body-grid-content .about-work .p-achievements {
+        font-size: 0.7rem;
+        margin: 0; }
+      body .div-body-grid-content .about-projects .project,
+      body .div-body-grid-content .about-achievements .project,
+      body .div-body-grid-content .about-work .project {
+        margin-bottom: 40px; }
+        body .div-body-grid-content .about-projects .project .h3,
+        body .div-body-grid-content .about-achievements .project .h3,
+        body .div-body-grid-content .about-work .project .h3 {
+          font-weight: bolder; }
+        body .div-body-grid-content .about-projects .project .achievement,
+        body .div-body-grid-content .about-achievements .project .achievement,
+        body .div-body-grid-content .about-work .project .achievement {
+          margin-top: 30px;
+          margin-bottom: 30px; }
+      body .div-body-grid-content .about-projects a,
+      body .div-body-grid-content .about-achievements a,
+      body .div-body-grid-content .about-work a {
+        text-decoration: none;
+        color: #aa001c;
+        font-weight: 700; }
   body .nav-link {
     font-weight: 700; }
   body .wrapper {
@@ -166,11 +211,6 @@ body {
   body .about-conB {
     align-items: center;
     justify-content: center; }
-  body .about-achievements {
-    grid-column: 1/5;
-    padding: 1rem;
-    font-size: 0.9rem;
-    font-weight: bolder; }
   body .footer {
     grid-area: footer;
     display: flex;
@@ -223,7 +263,13 @@ body {
         font-size: 1rem;
         display: block; }
       body .about-info {
-        grid-column: 1/6; } }
+        grid-column: 1/6; }
+      body .about-projects {
+        display: flex;
+        justify-content: center;
+        text-align: center; }
+        body .about-projects .project-img-div .project-img {
+          width: 300px; } }
   @media only screen and (min-width: 1024px) {
     body .navbar {
       font-weight: bolder; }
@@ -249,6 +295,33 @@ body {
         grid-column: 3/6; }
     body .about-achievements {
       font-size: 1rem; }
+      body .about-achievements .project {
+        display: grid;
+        grid-template-areas: "h2-achievements h2-achievements h2-achievements" "achievements-col-1 achievements-col-1 achievements-col-2" "achievements-col-1 achievements-col-1 achievements-col-2"; }
+        body .about-achievements .project .h2-achievements {
+          display: box;
+          grid-area: h2-achievements; }
+        body .about-achievements .project .achievements-col-1 {
+          grid-area: achievements-col-1; }
+        body .about-achievements .project .project-img-div {
+          grid-area: achievements-col-2; }
+          body .about-achievements .project .project-img-div .project-img {
+            width: 250px; }
+    body .about-work {
+      font-size: 1rem; }
+      body .about-work .project {
+        display: grid;
+        grid-template-areas: "achievements-col-1 achievements-col-2" "achievements-col-1 achievements-col-2"; }
+        body .about-work .project .achievements-col-1 {
+          grid-area: achievements-col-1; }
+          body .about-work .project .achievements-col-1 .achievement {
+            padding: 30px; }
+        body .about-work .project .project-img-div {
+          grid-area: achievements-col-2; }
+          body .about-work .project .project-img-div .project-img {
+            width: 250px; }
+          body .about-work .project .project-img-div .achievement {
+            padding: 30px; }
     body .image-indi {
       display: flex;
       width: max-content;
@@ -267,33 +340,28 @@ body {
         color: #aa001c;
         padding: 5px 5px;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-decoration: none; }
         body .navbar .nav-item .logo {
-          width: 250px;
-          height: 250px; }
+          width: 200px;
+          height: 200px; }
     body img {
-      width: 200px;
+      width: 150px;
       border: 7px;
       text-align: center; }
     body .brand {
       margin: 10px 20px; }
     body h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       padding-left: 50px; }
     body .image-indi {
       height: fit-content; }
-    body .about-conB {
-      font-size: 3rem; }
-    body .about-info-conB,
     body p {
-      font-size: 2rem; }
+      font-size: 1rem; }
     body section {
       font-size: 1.5rem; }
-    body .about-achievements {
-      font-size: 1rem; }
     body h2 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin: 5px;
       margin-top: 30px;
       margin-left: 30px; }
@@ -306,4 +374,35 @@ body {
       animation-iteration-count: infinite;
       animation-duration: 5s; }
     body .download-cv {
-      font-size: 3rem; } }
+      font-size: 3rem; }
+    body .about-achievements {
+      font-size: 1rem; }
+      body .about-achievements .project h3 {
+        font-size: 1.5rem; }
+      body .about-achievements .project .p-achievements {
+        font-size: 1rem;
+        font-weight: 700; }
+      body .about-achievements .project .achievements-col-1,
+      body .about-achievements .project .project-img-div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column; }
+    body .main {
+      padding-bottom: 50px; }
+    body .work {
+      border: 1px solid pink;
+      margin: 20px; }
+    body .div-body-grid-content .about-projects {
+      padding-top: 50px; }
+    body .div-body-grid-content .about-work {
+      padding-top: 50px; }
+      body .div-body-grid-content .about-work .project {
+        display: flex;
+        justify-content: center;
+        text-align: center; }
+        body .div-body-grid-content .about-work .project h2 {
+          border: none; }
+        body .div-body-grid-content .about-work .project .p-achievements {
+          font-size: 1rem;
+          font-weight: 700; } }

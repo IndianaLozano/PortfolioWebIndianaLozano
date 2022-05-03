@@ -8,76 +8,126 @@
 	<meta name="keywords" content="portfolio, mujer, HTML, CSS, GitHub, full stack">
 	<link rel="shortcut icon" href="../assets/img/logoindianalozanoportfolio.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="../css/main.css">
 
-	<title> Portfolio Web - Indiana Lozano </title>
+	<title> Indiana Lozano - Portfolio </title>
 </head>
 
 <body>
 
-	<div class="wrapper">
-		<header>
-			<div class="navbar">
-				<div class="brand">
-					<a href="../index.html"> <img src="../assets/img/logoindianalozanoportfolio.png"
-							alt="Indiana Lozano's Work Experience" width="150px" height="150px"></a>
+	<div class="div-body-grid-content">
+		<div class="wrapper">
+
+			<header>
+
+				<div class="navbar-conB">
+
+					<nav class="navbar navbar-expand-lg navbar-light bg-pink d-flex justify-content-around">
+
+						<a class="nav-item text-decoration-none" href="../index.html"><img class=" logo img-fluid"
+								src="../assets/img/logoindianalozanoportfolio.png" alt="Indiana Lozano's Portfolio Web">
+						</a>
+
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item d-flex justify-content-center">
+									<a class="nav-link" aria-current="page" href="#"> Projects </a>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a class="nav-link" href="achievements.html"> Achievements and certifications
+									</a>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a class="nav-link" href="workExperience.html"> Work experience </a>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a class="nav-link" href="contact.html"> Contact </a>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a class="nav-link" href="https://www.google.com"> Go to Google </a>
+								</li>
+							</ul>
+						</div>
+					</nav>
 				</div>
-				<ul class="menu">
-					<li><a href="projects.html"> Projects </a></li>
-					<li><a href="achievements.html"> Achievements and certifications </a></li>
-					<li><a href="workExperience.html"> Work experience </a></li>
-					<li><a href="contact.html"> Contact Indiana </a></li>
-					<li><a href="https://www.google.com" target="_blank"> Go to Google </a></li>
-				</ul>
-			</div>
-		</header>
 
-		<main class="main">
-			<div class="info-content">
-				<h1 class="animate__animated animate__fadeInDown">Indiana Lozano's Projects</h1>
+			</header>
+
+			<main class="main">
+				<div class="info-content">
+					<h1 class="animate__animated animate__fadeInDown">Indiana Lozano's Projects</h1>
+					<a download href="#">
+						<button class="download-cv">
+							Download CV
+						</button>
+					</a>
+				</div>
+				<div>
+					<img class="img-woman" src="../assets/img/programmer_woman.png" alt="Woman who codes">
+				</div>
+			</main>
+
+		</div>
+
+		<div class="about-projects">
+
+			<div class="project">
+				<div class="project-text">
+					<h2>Development of a program to manage sports competitions.</h2>
+					<p>
+						<a href="https://github.com/IndianaLozano/DisenoDeSistemas2020">GitHub repository here</a> 
+					</p>
+				</div>
+				<div class="project-img-div">
+					<img class="project-img" src="../assets/img/project-sports.png" alt="A person catching a ball.">
+				</div>
 			</div>
-			<div class="img-woman">
-				<img src="../assets/img/programmer_woman.png" alt="Woman who codes">
+
+			<div class="project">
+				<div class="project-text">
+					<h2>Web development from scratch focused mainly on learning HTML and CSS.
+					</h2>
+					<p>
+						<a href="https://github.com/IndianaLozano/CSS---Desarrollo-web.-CSS-desde-cero.-Edici-n-2020">GitHub repository here</a>
+					</p>
+				</div>
+				<div class="project-img-div">
+					<img class="project-img" src="../assets/img/project-web-development.png" alt="A person catching a ball.">
+				</div>
 			</div>
-		</main>
+
+			<div class="project">
+				<div class="project-text">
+					<h2>Development of a program to manage Driver's Licenses.
+					</h2>
+					<p>
+						<a href="https://github.com/IndianaLozano/TP-MA">GitHub repository here</a>
+					</p>
+				</div>
+				<div class="project-img-div">
+					<img class="project-img" src="../assets/img/project-car.png" alt="Three people in a car.">
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p class="copyright">Made with <img class="img-heart" alt="heart" src="../assets/img/heart.png"> by Indiana
+				Lozano.</p>
+		</footer>
+
 	</div>
-
-	<div class="about">
-
-		<div class="image-indi">
-			<img class="" src="../assets/img/indi.png" alt="Woman who codes">
-		</div>
-
-		<div class="about-info">
-			<h2>FIRST PROJECT</h2>
-			<div class="divider"></div>
-			<p>FIRST PROJECT: Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nemo corporis beatae
-				dolorem
-				ipsam delectus ad ullam hic nostrum debitis cumque blanditiis excepturi velit eaque sunt doloremque
-				fugit, qui adipisci.</p>
-
-			<h2>FIRST PROJECT</h2>
-			<div class="divider"></div>
-			<p>FIRST PROJECT: Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nemo corporis beatae
-				dolorem
-				ipsam delectus ad ullam hic nostrum debitis cumque blanditiis excepturi velit eaque sunt doloremque
-				fugit, qui adipisci.</p>
-			<h2>FIRST PROJECT</h2>
-			<div class="divider"></div>
-			<p>FIRST PROJECT: Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nemo corporis beatae
-				dolorem
-				ipsam delectus ad ullam hic nostrum debitis cumque blanditiis excepturi velit eaque sunt doloremque
-				fugit, qui adipisci.</p>
-
-		</div>
-
-	</div>
-
-	<footer class="footer">
-		<div class="footer-content">
-			Location
-		</div>
-	</footer>
 
 	<script src="js/wow.min.js"></script>
 	<script>
