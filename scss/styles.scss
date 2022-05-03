@@ -44,16 +44,72 @@ body {
         font-size: 1rem;
     }
 
-    .div-body-grid-content {
+    .div-body-grid-content-2-columns {
         display: grid;
         grid-template-areas: "wrapper wrapper"
             "about about "
             "footer footer";
     }
 
+    .div-body-grid-content {
+        display: grid;
+        grid-template-areas: "wrapper"
+            "about"
+            "footer";
+        justify-content: center;
+        margin: 0;
+
+
+        .about-projects,
+        .about-achievements,
+        .about-work {
+            @include flex;
+            flex-flow: column nowrap;
+            padding: 5px;
+
+            h2 {
+                margin: 0;
+                margin-bottom: 10px;
+                font-weight: bolder;
+
+                border-bottom: 1px solid pink;
+            }
+
+            .p-achievements {
+                font-size: 0.7rem;
+                margin: 0;
+            }
+
+            margin: 20px;
+
+            .project {
+                margin-bottom: 40px;
+
+                .h3 {
+                    font-weight: bolder;
+                }
+
+                .achievement {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: nth($list: $colores, $n: 2);
+                font-weight: map-get($map: $font-weights, $key: bold);
+            }
+        }
+
+
+    }
+
     .nav-link {
         font-weight: map-get($map: $font-weights, $key: bold);
     }
+
+
 
     .wrapper {
         @include size(100vw, 50vh);
@@ -181,9 +237,10 @@ body {
             @include flex;
             text-align: left;
 
-            .send-button{
+            .send-button {
                 @include flex;
-                .send{
+
+                .send {
                     @extend %btn;
                 }
             }
@@ -217,13 +274,6 @@ body {
     .about-conB {
         align-items: center;
         justify-content: center;
-    }
-
-    .about-achievements {
-        grid-column: 1/5;
-        padding: 1rem;
-        font-size: 0.9rem;
-        font-weight: bolder;
     }
 
     .footer {
@@ -306,6 +356,18 @@ body {
         .about-info {
             grid-column: 1/6;
         }
+
+        .about-projects {
+
+            @include flex;
+
+            .project-img-div {
+
+                .project-img {
+                    width: 300px;
+                }
+            }
+        }
     }
 
     @media only screen and (min-width:1024px) {
@@ -348,6 +410,61 @@ body {
 
         .about-achievements {
             font-size: 1rem;
+
+            .project {
+                display: grid;
+                grid-template-areas: "h2-achievements h2-achievements h2-achievements"
+                    "achievements-col-1 achievements-col-1 achievements-col-2"
+                    "achievements-col-1 achievements-col-1 achievements-col-2";
+
+                .h2-achievements {
+                    display: box;
+                    grid-area: h2-achievements;
+                }
+
+                .achievements-col-1 {
+                    grid-area: achievements-col-1;
+                }
+
+                .project-img-div {
+                    grid-area: achievements-col-2;
+
+                    .project-img {
+                        width: 250px;
+                    }
+
+                }
+            }
+        }
+
+        .about-work {
+            font-size: 1rem;
+
+            .project {
+                display: grid;
+                grid-template-areas: "achievements-col-1 achievements-col-2"
+                    "achievements-col-1 achievements-col-2";
+
+                .achievements-col-1 {
+                    grid-area: achievements-col-1;
+
+                    .achievement {
+                        padding: 30px;
+                    }
+                }
+
+                .project-img-div {
+                    grid-area: achievements-col-2;
+
+                    .project-img {
+                        width: 250px;
+                    }
+
+                    .achievement {
+                        padding: 30px;
+                    }
+                }
+            }
         }
 
         .image-indi {
@@ -377,17 +494,17 @@ body {
                 color: rgb(170, 0, 28);
                 padding: 5px 5px;
                 font-weight: bold;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 text-decoration: none;
 
                 .logo {
-                    @include size(250px, 250px)
+                    @include size(200px, 200px)
                 }
             }
         }
 
         img {
-            width: 200px;
+            width: 150px;
             border: 7px;
             text-align: center;
         }
@@ -397,7 +514,7 @@ body {
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             padding-left: 50px;
         }
 
@@ -405,25 +522,16 @@ body {
             height: fit-content;
         }
 
-        .about-conB {
-            font-size: 3rem;
-        }
-
-        .about-info-conB,
         p {
-            font-size: 2rem;
+            font-size: 1rem;
         }
 
         section {
             font-size: 1.5rem;
         }
 
-        .about-achievements {
-            font-size: 1rem;
-        }
-
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 5px;
             margin-top: 30px;
             margin-left: 30px;
@@ -441,6 +549,60 @@ body {
 
         .download-cv {
             font-size: 3rem;
+        }
+
+        .about-achievements {
+
+            font-size: 1rem;
+
+            .project {
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                .p-achievements {
+                    font-size: 1rem;
+                    font-weight: map-get($map: $font-weights, $key: "bold");
+                }
+
+                .achievements-col-1,
+                .project-img-div {
+                    @include flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .main {
+            padding-bottom: 50px;
+        }
+
+        .work {
+            border: 1px solid pink;
+            margin: 20px;
+        }
+
+        .div-body-grid-content{
+            .about-projects{
+                padding-top: 50px;
+            }
+
+            .about-work {
+                padding-top: 50px;
+                .project {
+                    @include flex;
+    
+                    h2 {
+                        border: none;
+                    }
+    
+                    .p-achievements {
+                        font-size: 1rem;
+                        font-weight: map-get($map: $font-weights, $key: "bold");
+                    }
+                }
+            }
         }
 
     }
