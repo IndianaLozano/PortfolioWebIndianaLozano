@@ -44,6 +44,10 @@ body {
         font-size: 1rem;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .div-body-grid-content-2-columns {
         display: grid;
         grid-template-areas: "wrapper wrapper"
@@ -94,7 +98,8 @@ body {
                     margin-bottom: 30px;
                 }
 
-                .achievements-col-1, .project-img-div {
+                .achievements-col-1,
+                .project-img-div {
                     .work {
                         margin-bottom: 20px;
                     }

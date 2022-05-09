@@ -52,6 +52,8 @@ body {
   body h3 {
     font-weight: bolder;
     font-size: 1rem; }
+  body a {
+    text-decoration: none; }
   body .div-body-grid-content-2-columns {
     display: grid;
     grid-template-areas: "wrapper wrapper" "about about " "footer footer"; }
@@ -94,7 +96,8 @@ body {
         body .div-body-grid-content .about-work .project .achievement {
           margin-top: 30px;
           margin-bottom: 30px; }
-        body .div-body-grid-content .about-projects .project .achievements-col-1 .work, body .div-body-grid-content .about-projects .project .project-img-div .work,
+        body .div-body-grid-content .about-projects .project .achievements-col-1 .work,
+        body .div-body-grid-content .about-projects .project .project-img-div .work,
         body .div-body-grid-content .about-achievements .project .achievements-col-1 .work,
         body .div-body-grid-content .about-achievements .project .project-img-div .work,
         body .div-body-grid-content .about-work .project .achievements-col-1 .work,
