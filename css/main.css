@@ -304,12 +304,16 @@ body {
           grid-area: achievements-col-1; }
           body .about-work .project .achievements-col-1 .achievement {
             padding: 30px; }
+          body .about-work .project .achievements-col-1 .work {
+            padding: 20px; }
         body .about-work .project .project-img-div {
           grid-area: achievements-col-2; }
           body .about-work .project .project-img-div .project-img {
             width: 250px; }
           body .about-work .project .project-img-div .achievement {
             padding: 30px; }
+          body .about-work .project .project-img-div .work {
+            padding: 20px; }
     body .image-indi {
       display: flex;
       width: max-content;
