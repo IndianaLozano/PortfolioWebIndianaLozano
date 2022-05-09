@@ -76,7 +76,7 @@ body {
             }
 
             .p-achievements {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
                 margin: 0;
             }
 
@@ -92,6 +92,12 @@ body {
                 .achievement {
                     margin-top: 30px;
                     margin-bottom: 30px;
+                }
+
+                .achievements-col-1, .project-img-div {
+                    .work {
+                        margin-bottom: 20px;
+                    }
                 }
             }
 
@@ -242,20 +248,9 @@ body {
             }
         }
 
-        .about-info-conB {
-            padding: 1rem;
-            font-size: 0.9rem;
-            font-weight: bolder;
-        }
-
         .contactMe {
             grid-column: 1/7;
         }
-    }
-
-    .about-conB {
-        align-items: center;
-        justify-content: center;
     }
 
     .footer {
@@ -561,20 +556,21 @@ body {
             margin: 20px;
         }
 
-        .div-body-grid-content{
-            .about-projects{
+        .div-body-grid-content {
+            .about-projects {
                 padding-top: 50px;
             }
 
             .about-work {
                 padding-top: 50px;
+
                 .project {
                     @include flex;
-    
+
                     h2 {
                         border: none;
                     }
-    
+
                     .p-achievements {
                         font-size: 1rem;
                         font-weight: map-get($map: $font-weights, $key: "bold");

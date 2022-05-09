@@ -10,4 +10,4 @@ https://github.com/IndianaLozano/PortfolioWebIndianaLozano
 
 https://portfoliowebindianalozano.000webhostapp.com/index.html#
 
-https://indianalozano.github.io/PortfolioWebIndianaLozano/pages/achievements.html
+https://indianalozano.github.io/PortfolioWebIndianaLozano

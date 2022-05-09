@@ -79,7 +79,7 @@ body {
       body .div-body-grid-content .about-projects .p-achievements,
       body .div-body-grid-content .about-achievements .p-achievements,
       body .div-body-grid-content .about-work .p-achievements {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin: 0; }
       body .div-body-grid-content .about-projects .project,
       body .div-body-grid-content .about-achievements .project,
@@ -94,6 +94,12 @@ body {
         body .div-body-grid-content .about-work .project .achievement {
           margin-top: 30px;
           margin-bottom: 30px; }
+        body .div-body-grid-content .about-projects .project .achievements-col-1 .work, body .div-body-grid-content .about-projects .project .project-img-div .work,
+        body .div-body-grid-content .about-achievements .project .achievements-col-1 .work,
+        body .div-body-grid-content .about-achievements .project .project-img-div .work,
+        body .div-body-grid-content .about-work .project .achievements-col-1 .work,
+        body .div-body-grid-content .about-work .project .project-img-div .work {
+          margin-bottom: 20px; }
       body .div-body-grid-content .about-projects a,
       body .div-body-grid-content .about-achievements a,
       body .div-body-grid-content .about-work a {
@@ -193,15 +199,8 @@ body {
         margin-top: 0px;
         margin-bottom: 1rem;
         margin-left: 1rem; }
-    body .about .about-info-conB {
-      padding: 1rem;
-      font-size: 0.9rem;
-      font-weight: bolder; }
     body .about .contactMe {
       grid-column: 1/7; }
-  body .about-conB {
-    align-items: center;
-    justify-content: center; }
   body .footer {
     grid-area: footer;
     display: flex;
